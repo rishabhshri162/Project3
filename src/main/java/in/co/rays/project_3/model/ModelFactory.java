@@ -27,21 +27,21 @@ public final class ModelFactory {
 			mFactory = new ModelFactory();
 		}
 		return mFactory;
-	}
+	 }
 
-	public HostelRoomModelInt getHostelRoomModel() {
-		HostelRoomModelInt hostelRoomModel = (HostelRoomModelInt) modelCache.get("hostelRoomModel");
-		if (hostelRoomModel == null) {
-			if ("Hibernate".equals(DATABASE)) {
-				hostelRoomModel = new HostelRoomModelHibImp();
-			}
-			if ("JDBC".equals(DATABASE)) {
-				hostelRoomModel = new HostelRoomModelJDBCImpl();
-			}
-			modelCache.put("hostelRoomModel", hostelRoomModel);
-		}
-		return hostelRoomModel;
-	}
+	// public HostelRoomModelInt getHostelRoomModel() {
+	// 	HostelRoomModelInt hostelRoomModel = (HostelRoomModelInt) modelCache.get("hostelRoomModel");
+	// 	if (hostelRoomModel == null) {
+	// 		if ("Hibernate".equals(DATABASE)) {
+	// 			hostelRoomModel = new HostelRoomModelHibImp();
+	// 		}
+	// 		if ("JDBC".equals(DATABASE)) {
+	// 			hostelRoomModel = new HostelRoomModelJDBCImpl();
+	// 		}
+	// 		modelCache.put("hostelRoomModel", hostelRoomModel);
+	// 	}
+	// 	return hostelRoomModel;
+	// }
 
 	public ProductModelInt getProductModel() {
 		ProductModelInt productModel = (ProductModelInt) modelCache.get("productModel");

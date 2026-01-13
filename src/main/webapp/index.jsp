@@ -23,6 +23,8 @@ body {
 		<h1 align="Center">
 			<a href="<%=ORSView.WELCOME_CTL%>" style="color: indigo;"> <font
 				size="8px">Online Result System</font></a>
+<h2 style="color: white; text-align: center;">
+   13-01-2026</h2>
 
 		</h1>
 	</div>

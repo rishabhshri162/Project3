@@ -18,6 +18,40 @@ public final class ModelFactory {
 	private static ModelFactory mFactory = null;
 	private static HashMap modelCache = new HashMap();
 
+
+
+
+	
+    /* ===================== ADDED CODE START ===================== */
+
+    // Build DB URL dynamically using environment variable
+    private static String getDbUrl() {
+
+        String url = rb.getString("url"); // jdbc:mysql://DB_HOST:3306/project_3
+
+        String dbHost = System.getenv("DB_HOST");
+
+        if (dbHost == null || dbHost.trim().isEmpty()) {
+            dbHost = "localhost";
+        }
+
+        return url.replace("DB_HOST", dbHost);
+    }
+
+    // Set Hibernate DB URL at startup
+    static {
+        try {
+            String finalUrl = getDbUrl();
+            System.setProperty("hibernate.connection.url", finalUrl);
+            System.out.println("DB URL set to: " + finalUrl);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    /* ===================== ADDED CODE END ===================== */
+
+
 	private ModelFactory() {
 
 	}

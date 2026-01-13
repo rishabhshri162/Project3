@@ -1,0 +1,30 @@
+# =========================
+# Maven / Build
+# =========================
+target/
+*.log
+*.class
+
+# =========================
+# IDE / OS
+# =========================
+.project
+.classpath
+.settings/
+bin/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Secrets
+# =========================
+.env
+*.key
+*.pem
+/.metadata/
+
+
+

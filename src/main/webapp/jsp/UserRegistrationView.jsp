@@ -250,7 +250,6 @@ i.css {
 									</div>
 									<input type="text" id="datepicker" name="dob"
 										class="form-control" placeholder="Date Of Birth"
-										readonly="readonly"
 										value="<%=DataUtility.getDateString(dto.getDob())%>">
 								</div>
 							</div>

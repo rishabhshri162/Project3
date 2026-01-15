@@ -164,6 +164,7 @@ public class LoginCtl extends BaseCtl {
 			} catch (ApplicationException | JDBCConnectionException e1) {
 				log.error(e1);
 //				ServletUtility.handleException(e, request, response);
+				e1.printStackTrace();
 				ServletUtility.setErrorMessage(e1.getMessage(), request);
 				ServletUtility.forward(getView(), request, response);
 				return;

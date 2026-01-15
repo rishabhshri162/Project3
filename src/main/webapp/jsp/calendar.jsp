@@ -16,7 +16,7 @@
       changeMonth : true,
 		changeYear : true,
 		yearRange : '1970:2030',
-		dateFormat : 'MM/dd/yyyy',
+		dateFormat : 'dd/mm/yy',
 		endDate : '-18y',
 			maxDate:0 
     });
@@ -50,7 +50,7 @@
 
   $(function () {
 	    $("#datepicker2").datepicker({
-	        dateFormat: 'dd/mm/yy',
+	        dateFormat: 'dd/MM/yyyy',
 	        changeMonth: true,
 	        changeYear: true,
 

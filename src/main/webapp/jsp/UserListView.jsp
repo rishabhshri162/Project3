@@ -41,9 +41,12 @@
 }
 </style>
 </head>
-<%@include file="Header.jsp"%>
 <body class="hm">
 	<div>
+		<div class="header">
+			<%@include file="Header.jsp"%>
+			<%@include file="calendar.jsp"%>
+		</div>
 		<form class="pb-5" action="<%=ORSView.USER_LIST_CTL%>" method="post">
 			<jsp:useBean id="dto" class="in.co.rays.project_3.dto.UserDTO"
 				scope="request"></jsp:useBean>
@@ -121,12 +124,12 @@
 						value="<%=ServletUtility.getParameter("login", request)%>">
 				</div>
 				&emsp;
-				<%-- <div class="col-sm-2">
-					<input type="text" name="dob" id="datepicker" placeholder="Enter dob"
-						class="form-control"
+				<div class="col-sm-2">
+					<input type="text" name="dob" id="datepicker"
+						placeholder="Enter dob" class="form-control"
 						value="<%=ServletUtility.getParameter("dob", request)%>">
 				</div>
-				&emsp; --%>
+				&emsp;
 				<div class="col-sm-3"><%=HTMLUtility.getList("Role", String.valueOf(dto.getRoleId()), list1)%></div>
 				&emsp;
 				<%-- <div class="col-sm-3">

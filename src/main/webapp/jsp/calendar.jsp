@@ -50,7 +50,7 @@
 
   $(function () {
 	    $("#datepicker2").datepicker({
-	        dateFormat: 'dd/MM/yyyy',
+	        dateFormat: 'dd/mm/yy',
 	        changeMonth: true,
 	        changeYear: true,
 

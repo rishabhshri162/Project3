@@ -25,10 +25,17 @@ public class ErrorCtl extends BaseCtl {
 		ServletUtility.forward(getView(), request, response);
 
 	}
+	
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+		ServletUtility.forward(getView(), request, response);
+	}
 
 	@Override
 	protected String getView() {
 		return ORSView.LOGIN_VIEW;
 	}
+
 
 }

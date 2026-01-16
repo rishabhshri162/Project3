@@ -11,39 +11,24 @@ import in.co.rays.project_3.util.ServletUtility;
 
 /**
  * Error functionality controller.perform error page operation
+ * 
  * @author Rishabh Shrivastava
  *
  */
-@WebServlet(name="ErrorCtl", urlPatterns={"/ErrorCtl"})
-public class ErrorCtl extends BaseCtl{
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
-	
-	
-	 /**
-     * Concept of Display logic
-     *
-     */
-	protected void doGet(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException{
-		
+@WebServlet(name = "ErrorCtl", urlPatterns = { "/ErrorCtl" })
+public class ErrorCtl extends BaseCtl {
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response)
+			throws IOException, ServletException {
+
+		ServletUtility.setErrorMessage("Database server down", request);
 		ServletUtility.forward(getView(), request, response);
-		
+
 	}
-	 /**
-     * Concept of submit logic
-     *
-     */
- protected void doPost(HttpServletRequest request,HttpServletResponse response) throws IOException, ServletException{
-	
-  ServletUtility.forward(getView(), request, response);
- 
-   
- }
+
 	@Override
 	protected String getView() {
-		return ORSView.ERROR_VIEW;
+		return ORSView.LOGIN_VIEW;
 	}
 
 }

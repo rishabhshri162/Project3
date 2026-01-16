@@ -1,0 +1,51 @@
+[33mbdd69e6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m done
+[33m3ef8b40[m done
+[33m7c373c6[m Update LoginCtl.java
+[33m32fe4ba[m Update LoginCtl.java
+[33mfd0ff53[m Update calendar.jsp
+[33mbad61d2[m Update calendar.jsp
+[33m150d73d[m Update UserRegistrationView.jsp
+[33m0a54da2[m Update UserListView.jsp
+[33m6ea975f[m Update UserListView.jsp
+[33mbd1e7f6[m Update UserListView.jsp
+[33m7d94d0e[m Update index.jsp
+[33m6536bce[m Update index.jsp
+[33m1acf0e8[m Update Welcome.jsp
+[33m1c414fb[m Remove target folder
+[33m4546b7d[m done
+[33m456546f[m Update hibernate.cfg.xml
+[33ma0c3d53[m Update ModelFactory.java
+[33m638a191[m Update hibernate.cfg.xml
+[33m9692c14[m Update system.properties
+[33mfe25ca4[m Update system.properties
+[33me76ee90[m Update hibernate.cfg.xml
+[33mc8f6ee1[m Update hibernate.cfg.xml
+[33m1c09d46[m Update hibernate.cfg.xml
+[33mc82a7ef[m Update system.properties
+[33m475e9fb[m Update system.properties
+[33mb5b9433[m Update system.properties
+[33md6f64a7[m Update Hibernate connection URL configuration
+[33m7185746[m Update Welcome.jsp
+[33m2761967[m Update Welcome.jsp
+[33mec11057[m Remove outdated date from index.jsp
+[33m17922da[m Add date to index.jsp
+[33m0acaaae[m done
+[33m369a493[m done
+[33m536d18d[m done
+[33m763383b[m done
+[33m8d8acb5[m done
+[33mdbceec3[m done
+[33m9414ed6[m done
+[33mc6fe6d9[m done
+[33m865c093[m done
+[33me0bcde4[m done
+[33mb9b9507[m done
+[33md67ee4b[m done
+[33m022b1f6[m done
+[33mcf37e24[m done
+[33m2ad6c35[m done
+[33m68b5f3a[m done
+[33md5670fb[m Update Hibernate configuration for database connection
+[33m2ec8605[m Update Hibernate configuration for database connection
+[33m84496e6[m done
+[33m93d586e[m Initial commit

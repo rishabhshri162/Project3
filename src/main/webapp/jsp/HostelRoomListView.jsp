@@ -180,7 +180,7 @@
 		<table width="100%">
 			<tr>
 				<td><input type="submit" name="operation"
-					class="btn btn-secondary btn-md"
+					class="btn btn-warning btn-md"
 					value="<%=HostelRoomListCtl.OP_PREVIOUS%>"
 					<%=pageNo > 1 ? "" : "disabled"%>></td>
 
@@ -193,7 +193,7 @@
 					value="<%=HostelRoomListCtl.OP_DELETE%>"></td>
 
 				<td align="right"><input type="submit" name="operation"
-					class="btn btn-secondary btn-md"
+					class="btn btn-warning btn-md"
 					value="<%=HostelRoomListCtl.OP_NEXT%>"
 					<%=(nextPageSize != 0) ? "" : "disabled"%>></td>
 			</tr>

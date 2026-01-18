@@ -1,6 +1,7 @@
 <%@page import="in.co.rays.project_3.dto.HostelRoomDTO"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="java.util.Iterator"%>
+<%@ page import="java.util.HashMap" %>
 <%@page import="java.util.List"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.util.HTMLUtility"%>
@@ -120,6 +121,18 @@
 					placeholder="Room Number"
 					value="<%=DataUtility.getStringData(dto.getRoomNumber())%>">
 			</div>
+			
+				<div class="col-sm-2">
+				<% HashMap <String, String> map = new HashMap <String, String>();
+						map.put("occupied", "occupied");
+						map.put("available", "available");
+
+						String htmlList = HTMLUtility.getList("status", dto.getStatus(), map);
+				%>
+				<%=htmlList%>
+				</div>
+
+			
 
 			<div class="col-sm-2">
 				<input type="submit" class="btn btn-primary btn-md" name="operation"

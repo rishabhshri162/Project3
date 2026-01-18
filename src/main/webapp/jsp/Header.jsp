@@ -110,7 +110,7 @@
 					} else if (userDto.getRoleId() == RoleDTO.ADMIN) {
 				%>
 
- 		<%-- 		 <li class="nav-item dropdown" style="padding-left: 5px;"><a
+ 				 <li class="nav-item dropdown" style="padding-left: 5px;"><a
  					class="nav-link dropdown-toggle" href="#" id="hostelDropdown"
 					role="button" data-toggle="dropdown" aria-haspopup="true"
 					aria-expanded="false"> <font style="color: white;">Hostel</font>
@@ -122,7 +122,8 @@
 						</a> <a class="dropdown-item" href="<%=ORSView.HOSTELROOM_LIST_CTL%>"><i
 							class="fa fa-list"></i>Hostel List</a>
 					</div></li> 
- --%>
+
+ 
 
 
 				<li class="nav-item dropdown" style="padding-left: 5px;"><a

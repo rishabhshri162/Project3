@@ -44,6 +44,6 @@
 	<mapping resource="in/co/rays/project_3/hbm/FacultyDTO.hbm.xml" />
 	<mapping resource="in/co/rays/project_3/hbm/SubjectDTO.hbm.xml" />
 	<mapping resource="in/co/rays/project_3/hbm/ProductDTO.hbm.xml" />
-	<mapping resource="in/co/rays/project_3/hbm/HostelRoomDTO.hbm.xml" />
+	<!-- <mapping resource="in/co/rays/project_3/hbm/HostelRoomDTO.hbm.xml" /> -->
 	</session-factory>
 </hibernate-configuration>

@@ -33,7 +33,6 @@ public class HostelRoomCtl extends BaseCtl {
 
 	private static Logger log = Logger.getLogger(HostelRoomCtl.class);
 
-
 	@Override
 	protected void preload(HttpServletRequest request) {
 
@@ -49,9 +48,6 @@ public class HostelRoomCtl extends BaseCtl {
 		request.setAttribute("roomTypeMap", roomTypeMap);
 		request.setAttribute("statusMap", statusMap);
 	}
-
-
-
 
 	@Override
 	protected boolean validate(HttpServletRequest request) {
@@ -71,6 +67,11 @@ public class HostelRoomCtl extends BaseCtl {
 		if (DataValidator.isNull(request.getParameter("capacity"))) {
 			request.setAttribute("capacity", PropertyReader.getValue("error.require", "Capacity"));
 			pass = false;
+		} else if (!DataValidator.isCapacityLength(request.getParameter("capacity"))) {
+
+			request.setAttribute("capacity", "Capacity should be 1 to 3 digit");
+
+			pass = false;
 		}
 
 		if (DataValidator.isNull(request.getParameter("rent"))) {
@@ -85,7 +86,6 @@ public class HostelRoomCtl extends BaseCtl {
 
 		return pass;
 	}
-
 
 	@Override
 	protected BaseDTO populateDTO(HttpServletRequest request) {
@@ -115,9 +115,9 @@ public class HostelRoomCtl extends BaseCtl {
 
 		try {
 			if (id > 0) {
-				dto = model.findByPK(id);  
+				dto = model.findByPK(id);
 			} else {
-				dto = new HostelRoomDTO();  
+				dto = new HostelRoomDTO();
 			}
 
 			request.setAttribute("dto", dto);
@@ -128,9 +128,6 @@ public class HostelRoomCtl extends BaseCtl {
 			ServletUtility.handleException(e, request, response);
 		}
 	}
-
-
-
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -169,7 +166,7 @@ public class HostelRoomCtl extends BaseCtl {
 			HostelRoomDTO dto = (HostelRoomDTO) populateDTO(request);
 			try {
 				model.delete(dto);
-			ServletUtility.redirect(ORSView.HOSTELROOM_LIST_CTL, request, response);
+				ServletUtility.redirect(ORSView.HOSTELROOM_LIST_CTL, request, response);
 				return;
 			} catch (ApplicationException e) {
 				log.error(e);

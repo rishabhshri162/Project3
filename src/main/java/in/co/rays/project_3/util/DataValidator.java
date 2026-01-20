@@ -122,6 +122,15 @@ public class DataValidator {
 		}
 	}
 
+	
+	public static boolean isCapacityLength(String val) {
+
+		if (isNotNull(val) && val.length() >= 1 && val.length() <= 3) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	/**
 	 * Checks if value is valid Phone No.
 	 * 

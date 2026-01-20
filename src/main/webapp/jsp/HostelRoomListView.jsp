@@ -1,7 +1,7 @@
 <%@page import="in.co.rays.project_3.dto.HostelRoomDTO"%>
 <%@page import="in.co.rays.project_3.util.DataUtility"%>
 <%@page import="java.util.Iterator"%>
-<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.HashMap"%>
 <%@page import="java.util.List"%>
 <%@page import="in.co.rays.project_3.util.ServletUtility"%>
 <%@page import="in.co.rays.project_3.util.HTMLUtility"%>
@@ -58,6 +58,8 @@
 
 			List list = ServletUtility.getList(request);
 			Iterator<HostelRoomDTO> it = list.iterator();
+			HashMap<String, String> status = (HashMap<String, String>) request.getAttribute("status");
+			HashMap<String, String> roomType = (HashMap<String, String>) request.getAttribute("roomType");
 		%>
 
 		<%
@@ -114,25 +116,29 @@
 
 		<!-- ===== SEARCH BAR ===== -->
 		<div class="row">
-			<div class="col-sm-4"></div>
+			<div class="col-sm-2"></div>
 
 			<div class="col-sm-2">
 				<input type="text" name="roomNumber" class="form-control"
-					placeholder="Room Number"
+					placeholder="Search by room number"
+					value="<%=DataUtility.getStringData(dto.getRoomNumber())%>">
+			</div>
+
+			<div class="col-sm-2">
+				<%
+					String htmlList = HTMLUtility.getList("status", dto.getStatus(), status);
+				%>
+				<%=htmlList%>
+			</div>
+			<div class="col-sm-2">
+				<input type="text" name="roomType" class="form-control"
+					placeholder="Search by room type"
 					value="<%=DataUtility.getStringData(dto.getRoomNumber())%>">
 			</div>
 			
-				<div class="col-sm-2">
-				<% HashMap <String, String> map = new HashMap <String, String>();
-						map.put("occupied", "occupied");
-						map.put("available", "available");
-
-						String htmlList = HTMLUtility.getList("status", dto.getStatus(), map);
-				%>
-				<%=htmlList%>
-				</div>
-
 			
+
+
 
 			<div class="col-sm-2">
 				<input type="submit" class="btn btn-primary btn-md" name="operation"

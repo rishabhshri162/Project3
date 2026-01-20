@@ -1,6 +1,7 @@
 package in.co.rays.project_3.controller;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.List;
 
 import javax.servlet.ServletException;
@@ -40,6 +41,14 @@ public class HostelRoomListCtl extends BaseCtl {
 		} catch (Exception e) {
 			log.error(e);
 		}
+		
+		
+		HashMap <String, String> status = new HashMap <String, String>();
+		status.put("Occupied", "Occupied");
+		status.put("Available", "Available");
+		
+		request.setAttribute("status", status);
+		
 	}
 
 	

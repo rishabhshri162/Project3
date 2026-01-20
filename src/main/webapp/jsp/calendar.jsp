@@ -54,7 +54,7 @@
 	        changeMonth: true,
 	        changeYear: true,
 
-	        // Show past 40 years and current year up to today (2025)
+	        // Show past 40 years and current year up to today (2026)
 	        yearRange: "1980:+0",  
 
 	        // Allow selecting up to today's date

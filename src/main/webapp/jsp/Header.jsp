@@ -122,7 +122,7 @@
 						</a> <a class="dropdown-item" href="<%=ORSView.HOSTELROOM_LIST_CTL%>"><i
 							class="fa fa-list"></i>Hostel List</a>
 					</div></li> 
-
+ 				 
  
 
 

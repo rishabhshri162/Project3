@@ -33,7 +33,6 @@ public class HostelRoomCtl extends BaseCtl {
 
 	private static Logger log = Logger.getLogger(HostelRoomCtl.class);
 
-	/* ================= PRELOAD ================= */
 
 	@Override
 	protected void preload(HttpServletRequest request) {
@@ -53,7 +52,6 @@ public class HostelRoomCtl extends BaseCtl {
 
 
 
-	/* ================= VALIDATE ================= */
 
 	@Override
 	protected boolean validate(HttpServletRequest request) {
@@ -88,7 +86,6 @@ public class HostelRoomCtl extends BaseCtl {
 		return pass;
 	}
 
-	/* ================= POPULATE DTO ================= */
 
 	@Override
 	protected BaseDTO populateDTO(HttpServletRequest request) {
@@ -134,7 +131,6 @@ public class HostelRoomCtl extends BaseCtl {
 
 
 
-	/* ================= DO POST ================= */
 
 	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)

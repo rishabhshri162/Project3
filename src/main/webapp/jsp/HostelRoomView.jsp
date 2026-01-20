@@ -36,16 +36,14 @@
 	<form action="<%=ORSView.HOSTELROOM_CTL%>" method="post">
 
 		<%
-			/* ================= DTO (ABSOLUTELY SAFE) ================= */
 			HostelRoomDTO dto = (HostelRoomDTO) request.getAttribute("dto");
 			if (dto == null) {
 				dto = new HostelRoomDTO();
 			}
 
-			Long idObj = dto.getId(); // 👈 wrapper safe
-			long id = (idObj != null) ? idObj : 0; // 👈 NEVER NULL
+			Long idObj = dto.getId();
+			long id = (idObj != null) ? idObj : 0;
 
-			/* ================= DROPDOWN MAPS ================= */
 			HashMap roomTypeMap = (HashMap) request.getAttribute("roomTypeMap");
 			if (roomTypeMap == null) {
 				roomTypeMap = new HashMap();
@@ -57,19 +55,17 @@
 			}
 		%>
 
-		<div class="container">
+<div class="container-fluid">
 			<div class="row">
 				<div class="col-md-4"></div>
 
 				<div class="col-md-4">
 					<div class="card">
 
-						<!-- ===== Heading ===== -->
 						<h3 class="text-center text-primary">
 							<%=(id > 0) ? "Update Hostel Room" : "Add Hostel Room"%>
 						</h3>
 
-						<!-- ===== SUCCESS MESSAGE ===== -->
 						<div class="row">
 							<div class="col-md-12 text-center">
 
@@ -91,7 +87,6 @@
 							</div>
 						</div>
 
-						<!-- ===== ERROR MESSAGE ===== -->
 						<div class="row">
 							<div class="col-md-12 text-center">
 
@@ -121,40 +116,103 @@
 						<input type="hidden" name="modifiedDatetime"
 							value="<%=DataUtility.getTimestamp(dto.getModifiedDatetime())%>">
 
-						<!-- ===== Room Number ===== -->
-						<label>Room Number <span style="color: red">*</span></label> <input
-							type="text" name="roomNumber" class="form-control" placeholder="Enter room number"
-							value="<%=DataUtility.getStringData(dto.getRoomNumber())%>">
-						<font color="red"> <%=ServletUtility.getErrorMessage("roomNumber", request)%>
-						</font> <br>
+						<div class="md-form">
 
-						<!-- ===== Room Type ===== -->
-						<label>Room Type <span style="color: red">*</span></label>
-						<%=HTMLUtility.getList("roomType", dto.getRoomType(), roomTypeMap)%>
-						<font color="red"> <%=ServletUtility.getErrorMessage("roomType", request)%>
-						</font> <br> <br>
+							<!-- Room Number -->
+							<span class="pl-sm-5"><b>Room Number</b> <span
+								style="color: red">*</span></span><br>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-building grey-text"></i>
+										</div>
+									</div>
+									<input type="text" class="form-control" name="roomNumber"
+										placeholder="Enter room number"
+										value="<%=DataUtility.getStringData(dto.getRoomNumber())%>">
+								</div>
+							</div>
+							<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("roomNumber", request)%>
+							</font><br>
+						
 
-						<!-- ===== Capacity ===== -->
-						<label>Capacity <span style="color: red">*</span></label> <input
-							type="text" name="capacity" class="form-control" placeholder="Enter capacity"
-							value="<%=(dto.getCapacity() != null) ? dto.getCapacity() : ""%>">
 
-						<font color="red"> <%=ServletUtility.getErrorMessage("capacity", request)%>
-						</font> <br>
+							<!-- Room Type -->
+							<span class="pl-sm-5"><b>Room Type</b> <span
+								style="color: red">*</span></span><br>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-bed grey-text"></i>
+										</div>
+									</div>
+									<%=HTMLUtility.getList("roomType", dto.getRoomType(), roomTypeMap)%>
+								</div>
+							</div>
+							<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("roomType", request)%>
+							</font><br>
+						
 
-						<!-- ===== Rent ===== -->
-						<label>Rent <span style="color: red">*</span></label><input
-							type="text" name="rent" class="form-control" placeholder="Enter rent"
-							value="<%=(dto.getRent() != null) ? dto.getRent() : ""%>">
 
-						<font color="red"> <%=ServletUtility.getErrorMessage("rent", request)%>
-						</font> <br>
+							<!-- Capacity -->
+							<span class="pl-sm-5"><b>Capacity</b> <span
+								style="color: red">*</span></span><br>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-users grey-text"></i>
+										</div>
+									</div>
+									<input type="text" class="form-control" name="capacity"
+										placeholder="Enter capacity"
+										value="<%=(dto.getCapacity() != null) ? dto.getCapacity() : ""%>">
+								</div>
+							</div>
+							<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("capacity", request)%>
+							</font><br>
+						
 
-						<!-- ===== Status ===== -->
-						<label>Status <span style="color: red">*</span></label>
-						<%=HTMLUtility.getList("status", dto.getStatus(), statusMap)%>
-						<font color="red"> <%=ServletUtility.getErrorMessage("status", request)%>
-						</font> <br> <br>
+
+							<!-- Rent -->
+							<span class="pl-sm-5"><b>Rent</b> <span style="color: red">*</span></span><br>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-coins grey-text"></i>
+										</div>
+									</div>
+									<input type="text" class="form-control" name="rent"
+										placeholder="Enter rent"
+										value="<%=(dto.getRent() != null) ? dto.getRent() : ""%>">
+								</div>
+							</div>
+							<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("rent", request)%>
+							</font><br>
+							
+
+
+							<!-- Status -->
+							<span class="pl-sm-5"><b>Status</b> <span
+								style="color: red">*</span></span><br>
+							<div class="col-sm-12">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<div class="input-group-text">
+											<i class="fa fa-toggle-on grey-text"></i>
+										</div>
+									</div>
+									<%=HTMLUtility.getList("status", dto.getStatus(), statusMap)%>
+								</div>
+							</div>
+							<font color="red" class="pl-sm-5"> <%=ServletUtility.getErrorMessage("status", request)%>
+							</font><br>
+						
+
+						</div>
 
 						<!-- ===== Buttons ===== -->
 						<div class="text-center">

@@ -19,7 +19,7 @@ public class HostelRoomModelTest {
 
     public static void main(String[] args) throws Exception {
 
-//        addTest();
+        addTest();
         // updateTest();
         // deleteTest();
         // findByPkTest();

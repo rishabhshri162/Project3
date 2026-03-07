@@ -16,6 +16,14 @@ public class DataValidator {
 			return false ;
 		}
 	}
+	
+	public static boolean isTrainNumber(String val) {
+	    if (val == null) {
+	        return false;
+	    }
+	    return val.matches("\\d{5}");
+	}
+
 	public static boolean isNotNull(String val){
 		return !isNull(val);
 		

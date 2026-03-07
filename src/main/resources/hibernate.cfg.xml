@@ -34,7 +34,7 @@
 			name="hibernate.c3p0.idle_test_period">3000</property> -->
 
 
-	<mapping resource="in/co/rays/project_3/hbm/UserDTO.hbm.xml" />
+    <mapping resource="in/co/rays/project_3/hbm/UserDTO.hbm.xml" />
 	<mapping resource="in/co/rays/project_3/hbm/StudentDTO.hbm.xml" />
 	<mapping resource="in/co/rays/project_3/hbm/CollegeDTO.hbm.xml" />
 	<mapping resource="in/co/rays/project_3/hbm/CourseDTO.hbm.xml" />
@@ -44,6 +44,10 @@
 	<mapping resource="in/co/rays/project_3/hbm/FacultyDTO.hbm.xml" />
 	<mapping resource="in/co/rays/project_3/hbm/SubjectDTO.hbm.xml" />
 	<mapping resource="in/co/rays/project_3/hbm/ProductDTO.hbm.xml" />
-	<mapping resource="in/co/rays/project_3/hbm/HostelRoomDTO.hbm.xml" />
+	<mapping resource="in/co/rays/project_3/hbm/HostelRoomDTO.hbm.xml" /> 
+	<mapping resource="in/co/rays/project_3/hbm/TrainTicketDTO.hbm.xml" />
+	<mapping resource="in/co/rays/project_3/hbm/MeetingDTO.hbm.xml" />
+	<mapping resource="in/co/rays/project_3/hbm/DriverDTO.hbm.xml" />
+	<mapping resource="in/co/rays/project_3/hbm/CateringDTO.hbm.xml" />
 	</session-factory>
 </hibernate-configuration>

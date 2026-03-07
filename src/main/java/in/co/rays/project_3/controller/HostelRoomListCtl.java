@@ -32,16 +32,16 @@ public class HostelRoomListCtl extends BaseCtl {
 
 	@Override
 	protected void preload(HttpServletRequest request) {
-
-		HostelRoomModelInt model = ModelFactory.getInstance().getHostelRoomModel();
-
-		try {
-			List list = model.list();
-			request.setAttribute("hostelRoomList", list);
-		} catch (Exception e) {
-			log.error(e);
-		}
-		
+//
+//		HostelRoomModelInt model = ModelFactory.getInstance().getHostelRoomModel();
+//
+//		try {
+//			List list = model.list();
+//			request.setAttribute("hostelRoomList", list);
+//		} catch (Exception e) {
+//			log.error(e);
+//		}
+//		
 		
 		HashMap <String, String> status = new HashMap <String, String>();
 		status.put("Occupied", "Occupied");

@@ -57,6 +57,12 @@ public class HostelRoomCtl extends BaseCtl {
 		if (DataValidator.isNull(request.getParameter("roomNumber"))) {
 			request.setAttribute("roomNumber", PropertyReader.getValue("error.require", "Room Number"));
 			pass = false;
+		} else if (!DataValidator.isInteger(request.getParameter("roomNumber"))) {
+
+			request.setAttribute("roomNumber", "please only in numeric");
+
+			pass = false;
+
 		}
 
 		if (DataValidator.isNull(request.getParameter("roomType"))) {
@@ -77,7 +83,15 @@ public class HostelRoomCtl extends BaseCtl {
 		if (DataValidator.isNull(request.getParameter("rent"))) {
 			request.setAttribute("rent", PropertyReader.getValue("error.require", "Rent"));
 			pass = false;
+			
+		} else if (!DataValidator.isInteger(request.getParameter("rent"))) {
+
+			request.setAttribute("rent", "only in digits");
+
+			pass = false;
+
 		}
+
 
 		if (DataValidator.isNull(request.getParameter("status"))) {
 			request.setAttribute("status", PropertyReader.getValue("error.require", "Status"));

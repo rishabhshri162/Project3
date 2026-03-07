@@ -71,9 +71,9 @@ public interface ORSView {
 	public String PRODUCT_VIEW = PAGE_FOLDER + "/ProductView.jsp";
 
 	public String PRODUCT_LIST_VIEW = PAGE_FOLDER + "/ProductListView.jsp";
-	
+
 	public String HOSTELROOM_VIEW = PAGE_FOLDER + "/HostelRoomView.jsp";
-	
+
 	public String HOSTELROOM_LIST_VIEW = PAGE_FOLDER + "/HostelRoomListView.jsp";
 
 	public String ERROR_CTL = APP_CONTEXT + "/ErrorCtl";
@@ -133,9 +133,45 @@ public interface ORSView {
 	public String FORGET_PASSWORD_CTL = APP_CONTEXT + "/ForgetPasswordCtl";
 
 	public String MARKSHEET_MERIT_LIST_CTL = APP_CONTEXT + "/ctl/MarksheetMeritListCtl";
+
+	public String HOSTELROOM_CTL = APP_CONTEXT + "/ctl/HostelRoomCtl";
+
+	public String HOSTELROOM_LIST_CTL = APP_CONTEXT + "/ctl/HostelRoomListCtl";
+
+	public String TRAINTICKET_CTL = APP_CONTEXT + "/ctl/TrainTicketCtl";
+
+	public String TRAINTICKET_VIEW = PAGE_FOLDER + "/TrainTicketView.jsp";
+
+	public static final String TRAINTICKET_LIST_CTL = APP_CONTEXT + "/ctl/TrainTicketListCtl";
+
+	public static final String TRAINTICKET_LIST_VIEW = PAGE_FOLDER + "/TrainTicketListView.jsp";
+
+	public String MEETING_CTL = APP_CONTEXT + "/ctl/MeetingCtl";
+
+	public String MEETING_VIEW = PAGE_FOLDER + "/MeetingView.jsp";
+
+	public static final String MEETING_LIST_CTL = APP_CONTEXT + "/ctl/MeetingListCtl";
+
+	public static final String MEETING_LIST_VIEW = PAGE_FOLDER + "/MeetingListView.jsp";
 	
-	public String HOSTELROOM_CTL= APP_CONTEXT + "/ctl/HostelRoomCtl";
 	
-	public String HOSTELROOM_LIST_CTL= APP_CONTEXT + "/ctl/HostelRoomListCtl";
+	
+	public String CATERING_CTL = APP_CONTEXT + "/ctl/CateringCtl";
+
+	public String CATERING_VIEW = PAGE_FOLDER + "/CateringView.jsp";
+
+	public static final String CATERING_LIST_CTL = APP_CONTEXT + "/ctl/CateringListCtl";
+
+	public static final String CATERING_LIST_VIEW = PAGE_FOLDER + "/CateringListView.jsp";
+	
+	
+	
+	public String DRIVER_CTL = APP_CONTEXT + "/ctl/DriverCtl";
+
+	public String DRIVER_VIEW = PAGE_FOLDER + "/DriverView.jsp";
+
+	public static final String DRIVER_LIST_CTL = APP_CONTEXT + "/ctl/DriverListCtl";
+
+	public static final String DRIVER_LIST_VIEW = PAGE_FOLDER + "/DriverListView.jsp";
 
 }

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="in.co.rays.project_3.dto">
+
+	<class name="MeetingDTO" table="ST_MEETING">
+
+		<id name="id" type="java.lang.Long">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+
+		<property name="meetingCode" type="java.lang.String">
+			<column name="MEETING_CODE" unique="true" />
+		</property>
+
+		<property name="meetingTitle" type="java.lang.String">
+			<column name="MEETING_TITLE" />
+		</property>
+
+		<property name="meetingTime" type="java.util.Date">
+			<column name="MEETING_TIME" />
+		</property>
+
+		<property name="meetingLocation" type="java.lang.String">
+			<column name="MEETING_LOCATION" />
+		</property>
+
+		<property name="meetingStatus" type="java.lang.String">
+			<column name="MEETING_STATUS" />
+		</property>
+
+		<property name="createdBy" type="java.lang.String"
+			length="50">
+			<column name="CREATED_BY" />
+		</property>
+
+		<property name="modifiedBy" type="java.lang.String"
+			length="50">
+			<column name="MODIFIED_BY" />
+		</property>
+
+		<property name="createdDatetime" type="java.sql.Timestamp">
+			<column name="CREATED_DATETIME" />
+		</property>
+
+		<property name="modifiedDatetime" type="java.sql.Timestamp">
+			<column name="MODIFIED_DATETIME" />
+		</property>
+
+	</class>
+
+</hibernate-mapping>

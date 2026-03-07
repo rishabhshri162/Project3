@@ -28,6 +28,85 @@ public final class ModelFactory {
 		}
 		return mFactory;
 	}
+	
+	
+	
+	public CateringModelInt getCateringModel() {
+
+		CateringModelInt cateringModel = (CateringModelInt) modelCache.get("cateringModel");
+
+		if (cateringModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				cateringModel = new CateringModelHibImp();
+			}
+
+//			if ("JDBC".equals(DATABASE)) {
+//				meetingModel = new MeetingModelJDBCImpl();
+//			}
+
+			modelCache.put("cateringModel", cateringModel);
+		}
+
+		return cateringModel;
+	}
+	
+	
+	
+	
+	public DriverModelInt getDriverModel() {
+
+		DriverModelInt driverModel = (DriverModelInt) modelCache.get("driverModel");
+
+		if (driverModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				driverModel = new DriverModelHibImp();
+			}
+
+//			if ("JDBC".equals(DATABASE)) {
+//				meetingModel = new MeetingModelJDBCImpl();
+//			}
+
+			modelCache.put("driverModel", driverModel);
+		}
+
+		return driverModel;
+	}
+
+	public MeetingModelInt getMeetingModel() {
+
+		MeetingModelInt meetingModel = (MeetingModelInt) modelCache.get("meetingModel");
+
+		if (meetingModel == null) {
+
+			if ("Hibernate".equals(DATABASE)) {
+				meetingModel = new MeetingModelHibImp();
+			}
+
+//			if ("JDBC".equals(DATABASE)) {
+//				meetingModel = new MeetingModelJDBCImpl();
+//			}
+
+			modelCache.put("meetingModel", meetingModel);
+		}
+
+		return meetingModel;
+	}
+
+	public TrainTicketModelInt getTrainTicketModel() {
+		TrainTicketModelInt trainTicketModel = (TrainTicketModelInt) modelCache.get("trainTicketModel");
+		if (trainTicketModel == null) {
+			if ("Hibernate".equals(DATABASE)) {
+				trainTicketModel = new TrainTicketModelHibImp();
+			}
+			if ("JDBC".equals(DATABASE)) {
+				trainTicketModel = new TrainTicketModelJDBCImpl();
+			}
+			modelCache.put("trainTicketModel", trainTicketModel);
+		}
+		return trainTicketModel;
+	}
 
 	public HostelRoomModelInt getHostelRoomModel() {
 		HostelRoomModelInt hostelRoomModel = (HostelRoomModelInt) modelCache.get("hostelRoomModel");
